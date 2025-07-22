@@ -6,7 +6,7 @@ import demjson3
 from typing import Any, Dict
 
 from .prompts import PROMPTS, TODAY, TODAY_WEEKDAY, FIX_JSON_PROMPT
-from ..settings import get_settings
+from ..config import load_config
 
 # You would implement _strip_md_fence and safe_json_parse similar to previous work
 
@@ -86,11 +86,12 @@ def call_llm(
         },
     }
 
+    cfg = load_config()
     headers = {"Content-Type": "application/json"}
 
     for attempt in range(retry):
         try:
-            resp = requests.post(TODAY_WEEKDAY, headers=headers,
+            resp = requests.post(cfg["llm_endpoint"], headers=headers,
                                  json=payload, timeout=600)
 
             if resp.status_code != 200:

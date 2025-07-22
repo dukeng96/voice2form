@@ -2,7 +2,7 @@ fastapi
 uvicorn[standard]
 aiohttp
 python-multipart
-pydantic
 python-dotenv
 requests
 demjson3
+pyyaml
