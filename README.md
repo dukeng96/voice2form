@@ -1,12 +1,11 @@
-# Green Agri Voice Backend
+# Voice2Form
 
 ## Quick start
 
 ```bash
-git clone …
-cd agri_voice_backend
-docker build -t agri-ai .
-docker run -p 8000:80 --env-file .env agri-ai
+cd voice2form
+docker build -t voice2form .
+docker run -p 8000:80
 ```
 
 API endpoints:
