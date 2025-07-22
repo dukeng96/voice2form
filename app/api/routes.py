@@ -1,10 +1,9 @@
 import uuid
 import os
 import logging
-from fastapi import APIRouter, UploadFile, File, Form, Depends
+from fastapi import APIRouter, UploadFile, File, Form
 from ..core.stt import speech_to_text
 from ..core.llm import parse_record
-from ..settings import Settings
 
 router = APIRouter()
 logger = logging.getLogger(__name__)

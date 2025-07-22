@@ -1,0 +1,2 @@
+llm_endpoint: http://llm-container:8080/prediction
+stt_endpoint: http://stt-container:5000/stt
